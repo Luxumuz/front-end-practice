@@ -1,0 +1,608 @@
+HTML docs
+
+Elements:
+
+<elementName>Content goes here</elementName>
+
+
+Void elements, no closing tag:
+
+<img>
+<meta>
+
+
+Attributes, placed in the opening element, provides additional info:
+
+<elementName attribute="value"></elementName>
+
+
+Boolean attributes are either present or absent in an HTML tag. If present, value is true, otherwise false
+
+examples: disabled, readonly, required
+
+
+Comments:
+
+<!-- Comment -->
+
+
+Common elements:
+
+Headers
+<h1>most important heading element</h1>
+<h2>second most important heading element</h2>
+<h3>third most important heading element</h3>
+<h4>fourth most important heading element</h4>
+<h5>fifth most important heading element</h5>
+<h6>least important heading element</h6>
+
+Paragraph
+<p>This is a paragraph element</p>
+
+
+Image
+<img src="link/file path here">
+
+add alt attribute incase image doesnt load
+
+
+Body, represents the content for the HTML document
+<body>
+  <h1>Header</h1>
+  <p>This is a paragraph element</p>
+</body>
+
+
+Section, divide the content into smaller sections
+<section>
+  <h2>Wassup</h2>
+  <p>Hi, I am a web developer.</p>
+</section>
+
+
+Division, generic container to hold elements
+<div>
+  <h1>I am a heading</h1>
+  <p>I am a paragraph</p>
+</div>
+
+
+Anchor, used to apply links to the webpage. href attribute specifies where the link should go when clicked
+<a href="https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg">cute cats</a>
+
+
+Unordered list (bullet list)
+<ul>
+  <li>catnip</li>
+  <li>laser pointers</li>
+  <li>lasagna</li>
+</ul>
+
+Ordered list (numbered)
+<ol>
+  <li>flea treatment</li>
+  <li>thunder</li>
+  <li>other cats</li>
+</ol>
+
+
+Emphasis (sideways)
+<p>I <em>love</em> pizza</p>
+
+
+Strong emphasis (bold)
+<p>This is <strong>very</strong> good</p>
+
+
+Footer, placed at the bottom, usually cointains copyright info and other important links
+<footer>
+  <p>
+    No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a>
+  </p>
+</footer>
+
+
+ID and Grouping:
+
+IDs, unique element identifiers, used once per document. Cannot contain spaces, 
+<h1 id="title">Movie Review Page</h1>
+<div id="red-box"></div>
+
+Classes, also element identifiers but can be used on multiple elements, can contain spaces
+<div class="box"></div>
+
+<div class="box red-box"></div>
+<div class="box blue-box"></div>
+
+
+Link, used to link external resources like stylesheets and site icons
+<link rel="stylesheet" href="./styles.css" />
+
+
+Script, used to embed executable code
+<script>
+    alert("Welcome to freeCodeCamp");
+</script>
+
+
+
+HTML boilerplate/structure
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>freeCodeCamp</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!--Headings, paragraphs, images, etc. go inside here-->
+  </body>
+</html>
+
+
+
+Media elements
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/PkZNo7MFNFg?si=-UBVIUNM3csdeiWF"
+  title="YouTube video player"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin"
+  allowfullscreen
+></iframe>
+
+
+Audio 
+<audio src="CrystalizeThatInnerChild.mp3" controls loop muted></audio>
+
+Backups:
+<audio controls>
+  <source src="audio.ogg" type="audio/ogg" />
+  <source src="audio.wav" type="audio/wav" />
+  <source src="audio.mp3" type="audio/mpeg" />
+</audio>
+
+
+Posters, adds an image while video is loading
+<video
+  src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+  poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
+></video>
+
+
+Target attributes
+<a href="https://freecodecamp.org" target="_self">Visit freeCodeCamp</a>
+<a href="https://freecodecamp.org" target="_blank">Visit freeCodeCamp</a>
+<a href="https://freecodecamp.org" target="_parent">Visit freeCodeCamp</a>
+<a href="https://freecodecamp.org" target="_top">Visit freeCodeCamp</a>
+
+_self opens in the current window/tab
+_blank opens a new window/tab
+_parent opens in the parent of the current context
+_top opens in the top-most browsing context
+
+
+Link states:
+:link (untouched)
+:visited (visited the page that the link links to)
+:hover (when a user is hovering on a link)
+:focus (when we focuses on the link)
+
+
+
+Description lists, dl. description term, dt. description details, dd
+<dl>
+  <dt>HTML</dt>
+  <dd>HyperText Markup Language</dd>
+  <dt>CSS</dt>
+  <dd>Cascading Style Sheets</dd>
+  <dt>JS</dt>
+  <dd>JavaScript</dd>
+</dl>
+
+
+Block and inline quotes, cite attribute with the url for the quote
+<blockquote cite="https://www.freecodecamp.org/news/learn-to-code-book/">
+  "Can you imagine what it would be like to be a successful developer? To have built software systems that people rely upon?"
+</blockquote>
+
+block quote with paragraphs for multiple paragraphs
+<blockquote cite="https://www.freecodecamp.org/news/learn-to-code-book/">
+  <p>Build your projects. Show them to your friends. Build projects for your friends.</p>
+  <p>Build your network. Help the people you meet along the way. What goes around comes around. You'll get what's coming to you.</p>   
+  <p>It is not too late. Life is long.</p>
+  <p>You will look back on this moment years from now and be glad you made a move.</p>
+</blockquote>
+
+
+Block quote with visible citation
+<div>
+  <blockquote cite="https://www.freecodecamp.org/news/learn-to-code-book/">
+    Can you imagine what it would be like to be a successful developer? To have built software systems that people rely upon?
+  </blockquote>
+  <p>—Quincy Larson, <cite>How to Learn to Code and Get a Developer Job [Full Book].</cite></p>
+</div>
+
+
+Abbreviations
+<p><abbr title="HyperText Markup Language">HTML</abbr> is the foundation of the web.</p>
+
+
+Addresses
+<address>
+  <h2>Company Name</h2>
+  <p>
+    1234 Elm Street<br />
+    Springfield, IL 62701<br />
+    United States
+  </p>
+  <p>Phone: <a href="tel:+15555555555">+1 (555) 555-5555</a></p>
+  <p>Email: <a href="mailto:contact@company.com">contact@company.com</a></p>
+</address>
+
+
+Times and Dates
+p>The reservations are for <time datetime="20:00">20:00 </time></p>
+
+<p>
+  The graduation will be on <time datetime="2024-06-15T15:00">June 15</time>
+</p>
+(ISO 8601 FORMAT)
+
+
+
+Math Equations and Chemical Formulas:
+
+Superscript, displays a piece of text printed above the normal line of text
+<p>2<sup>2</sup> (2 squared) is 4.</p>
+
+<p>
+  Monseigneur is often written as <strong>M<sup>gr</sup></strong>.
+</p>
+
+
+Subscript, same as superscript but lower than baseline for text
+<p>CO<sub>2</sub></p>
+
+
+Code in text, code only represents single line code, so if more lines wrap code in pre
+<p>
+  To set the text color to blue in CSS, use the following code:
+  <code>color: blue;</code>
+</p>
+
+Preformatted text
+<pre>
+  <code>
+    body {
+      color: red;
+    }
+  </code>
+</pre>
+
+
+
+Structural hierarchy:
+
+Header element, used to define the header of a document or section
+<header>
+  <h1>CatPhotoApp</h1>
+  <p>Welcome to our cat gallery.</p>
+</header>
+
+
+Main element, contain the main content of the web page
+<main>
+  <section>
+    <h2>Cat Photos</h2>
+    <p>Browse adorable cat pictures.</p>
+  </section>
+</main>
+
+
+Section element, divide content into smaller sections
+<section>
+  <h2>About Me</h2>
+  <p>Hi, I am Jane Doe and I am a web developer.</p>
+</section>
+
+
+Navigation Section, section with navigation links, list not neccessary, but better
+<nav>
+  <ul>
+    <li><a href="#photos">Photos</a></li>
+    <li><a href="#videos">Videos</a></li>
+  </ul>
+</nav>
+
+
+Figure/figcaption, figure groups content like images an diagrams, figcaptions represent a caption for that content
+<figure>
+  <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Two tabby kittens sleeping together on a couch.">
+  <figcaption>Cats <strong>hate</strong> other cats.</figcaption>  
+</figure>
+
+
+Idiomatic text, highlights alternative voice or moods etc.
+<p>
+  There is a certain <i lang="fr">je ne sais quoi</i> in the air.
+</p>
+
+
+Unarticulated Annotation, represents a span of inline text that is rendered non textual annotation
+<p>
+  You can use the unarticulated annotation element to highlight
+  <u>inccccort</u> <u>spling</u> <u>issses</u>.
+</p>
+
+
+Ruby Annotation (ruby), used for text with pronounciation or meaning explanations
+Ruby fallback parenthesis (rp)m used as a fallback for browsers lacking support
+Ruby text (rt), indicate text for the ruby annotation, used for pronounciation
+<ruby>
+  明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp>
+</ruby>
+
+
+Strikethrough element, used to represent content no longer accurate
+<p>
+  <s>Tomorrow's hike will be meeting at noon.</s>
+</p>
+<p>
+  Due to unforeseen weather conditions, the hike has been canceled.
+</p>
+
+
+Internal links, used to link another section of the page, skipping links table of contents
+<a href="#about-section">Go to About Section</a>
+
+<section id="about-section">
+  <h2>About</h2>
+  <p>This is the about section of the page.</p>
+</section>
+
+
+
+Forms, labels and Inputs.
+
+Forms, gathers information, acion specifies where the form data will be sent to
+<form action="url-goes-here">
+  <!-- input elements go here -->
+</form>
+
+Input, void element, type decides what type on input it is. 
+<form action="">
+  <label>
+    Full Name:
+    <input type="text" />
+  </label>
+</form>
+
+<form action="">
+  <label for="email"> Email Address: </label>
+  <input type="email" id="email" />
+</form>
+
+
+Placeholder attribute, makes text appear in the input box, half transparent, acts as a guide
+<form action="">
+  <label for="email"> Email Address: </label>
+  <input type="email" id="email" placeholder="example@email.com" />
+</form>
+
+
+Button
+<form action="">
+  <label for="email">Email address:</label>
+  <input type="email" id="email" name="email" />
+  <button type="submit">Submit form</button>
+</form>
+
+
+Button attributes
+
+button
+submit
+reset
+
+
+<form action="">
+  <label for="email">Email address:</label>
+  <input type="email" id="email" name="email" />
+  <button type="reset">Reset form</button>
+  <button type="submit">Submit form</button>
+</form>
+
+<input class="start-btn" type="button" value="Start Game" />
+<script src="index.js"></script>
+
+
+Client side validation in HTML forms
+<form action="">
+  <label for="email">Email Address (Required field):</label>
+  <input required type="email" name="email" id="email" />
+  <button type="submit">Submit Form</button>
+</form>
+
+min and max length of email
+<form action="">
+  <label for="email">Email Address (Required field):</label>
+  <input
+    required
+    type="email"
+    name="email"
+    id="email"
+    minlength="4"
+    maxlength="64"
+  />
+  <button type="submit">Submit Form</button>
+</form>
+
+
+Dropdown boxes.
+<label for="city">Choose a City: </label>
+<select id="city" name="city">
+  <option value="new-york">New York</option>
+  <option value="los-angeles">Los Angeles</option>
+  <option value="chicago">Chicago</option>
+  <option value="miami">Miami</option>
+</select>
+
+
+Tables
+<table id="quickfacts">
+  <thead>
+    <tr>
+      <th colspan="2">Quick Facts: Software Developers, Quality Assurance Analysts, and Testers</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2023 Median Pay</th>
+      <td>
+        $130,160 per year
+        <br>$62.58 per hour
+      </td>
+    </tr>
+    <tr>
+      <th>Typical Entry-Level Education</th>
+      <td>Bachelor's degree</td>
+    </tr>
+    <tr>
+      <th>Work Experience in a Related Occupation</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>On-the-job Training</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>Number of Jobs, 2022</th>
+      <td>1,795,300</td>
+    </tr>
+    <tr>
+      <th>Job Outlook, 2022-32</th>
+      <td>25% (Much faster than average)</td>
+    </tr>
+    <tr>
+      <th>Employment Change, 2022-32</th>
+      <td>451,200</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th>If this table had a footer it would be here.</th>
+    </tr>
+  </tfoot>
+</table>
+
+simplified
+<table>
+  <thead>
+    <tr>
+      <th>The title of this table</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>First Row</th>
+      <td>
+        First Data Cell
+      </td>
+    </tr>
+    <tr>
+      <th>Second Row</th>
+      <td>
+        Second Data Cell
+      </td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th>The footer of this table, which might contain date of publication, author credits, or other meta information.</th>
+    </tr>
+  </tfoot>
+</table>
+
+thead	- table head, groups titles
+tbody	- table body, the data is here
+tfoot	- table foot, summing up
+tr	- table row
+th	- table header cell
+td	- table data cell
+
+
+<!-- Text input -->
+<input 
+  type="text"
+  id="name"
+  name="name"
+  placeholder="e.g. Quincy Larson" 
+  size="20"
+  minlength="5"
+  maxlength="30"
+  required
+/>
+
+<!-- Number input -->
+<input 
+  type="number"
+  id="quantity"
+  name="quantity"
+  min="2"
+  max="10"
+  disabled
+/>
+
+<!-- Button -->
+<input type="button" value="Show Alert" />
+
+
+
+
+<form action="">
+  <label>
+    Full Name:
+    <input type="text" />
+  </label>
+</form>
+
+
+<form action="">
+  <label for="email">Email Address: </label>
+  <input type="email" id="email" />
+</form>
+
+
+<button type="button">Show Form</button>
+<button type="submit">Submit Form</button>
+<button type="reset">Reset Form</button>
+
+
+
+
+<!-- Radio group -->
+<fieldset>
+  <legend>Was this your first time at our hotel?</legend>
+
+  <label for="yes-option">Yes</label>
+  <input id="yes-option" type="radio" name="hotel-stay" value="yes" />
+
+  <label for="no-option">No</label>
+  <input id="no-option" type="radio" name="hotel-stay" value="no" />
+</fieldset>
+
+<!-- Checkbox group -->
+<fieldset>
+  <legend>
+    Why did you choose to stay at our hotel? (Check all that apply)
+  </legend>
+
+  <label for="location">Location</label>
+  <input type="checkbox" id="location" name="location" value="location" />
+
+  <label for="price">Price</label>
+  <input type="checkbox" id="price" name="price" value="price" />
+</fieldset>
